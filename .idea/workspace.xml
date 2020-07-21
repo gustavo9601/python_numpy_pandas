@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/graficas_matplotlib/2_lineas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graficas_matplotlib/barras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graficas_matplotlib/barras2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graficas_matplotlib/dispersion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graficas_matplotlib/sencilla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_matplotlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/graficas_matplotlib/pie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/_numpy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +34,8 @@
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\graficas_matplotlib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dispersion">
-    <configuration name="2_lineas (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python._numpy">
+    <configuration name="_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_numpy_pandas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,12 +43,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficas_matplotlib" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficas_matplotlib/2_lineas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_numpy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python._numpy" />
         <item itemvalue="Python.dispersion" />
         <item itemvalue="Python.pie" />
         <item itemvalue="Python.barras2" />
         <item itemvalue="Python.barras" />
-        <item itemvalue="Python.2_lineas (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595275154856</updated>
-      <workItem from="1595275166559" duration="6267000" />
+      <workItem from="1595275166559" duration="9835000" />
     </task>
     <servers />
   </component>
@@ -178,22 +173,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="110" key="GridCell.Tab.0.bottom" timestamp="1595290791179">
+    <state width="1322" height="281" key="GridCell.Tab.0.bottom" timestamp="1595294480787">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="110" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595290791179" />
-    <state width="1322" height="110" key="GridCell.Tab.0.center" timestamp="1595290791178">
+    <state width="1322" height="281" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595294480787" />
+    <state width="1322" height="281" key="GridCell.Tab.0.center" timestamp="1595294480787">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="110" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595290791178" />
-    <state width="1322" height="110" key="GridCell.Tab.0.left" timestamp="1595290791178">
+    <state width="1322" height="281" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595294480787" />
+    <state width="1322" height="281" key="GridCell.Tab.0.left" timestamp="1595294480787">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="110" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595290791178" />
-    <state width="1322" height="110" key="GridCell.Tab.0.right" timestamp="1595290791179">
+    <state width="1322" height="281" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595294480787" />
+    <state width="1322" height="281" key="GridCell.Tab.0.right" timestamp="1595294480787">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="110" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595290791179" />
+    <state width="1322" height="281" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1595294480787" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_numpy_pandas$_pandas.coverage" NAME="_pandas Coverage Results" MODIFIED="1595278804610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -202,7 +197,7 @@
     <SUITE FILE_PATH="coverage/python_numpy_pandas$barras2.coverage" NAME="barras2 Coverage Results" MODIFIED="1595290443972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$pie.coverage" NAME="pie Coverage Results" MODIFIED="1595290664187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$2_lineas__1_.coverage" NAME="2_lineas (1) Coverage Results" MODIFIED="1595289941506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$_numpy.coverage" NAME="_numpy Coverage Results" MODIFIED="1595277192405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$barras.coverage" NAME="barras Coverage Results" MODIFIED="1595290099280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$_numpy.coverage" NAME="_numpy Coverage Results" MODIFIED="1595294480775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
