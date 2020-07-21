@@ -1,0 +1,6 @@
+Ciudad, Latitud, Longitud
+# este es un comentario
+COL, 12, 20
+MEX, 20, 30
+ECY, 90, 22
+# Este es un comentario

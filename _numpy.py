@@ -2,7 +2,6 @@
 
 import numpy as np
 
-
 """
 Tipos de datos, para Numpy
 Bool	?
@@ -23,7 +22,6 @@ Unicode	U
 a_flotante = np.array([1, 2, 3, 4], dtype='f')
 print("a_flotante", a_flotante)
 
-
 # .arange(valores) crea un arreglo de datos
 # (valor_inicial, valor_final, salto)
 a1 = np.arange(2, 10, 2)
@@ -32,6 +30,11 @@ print("a1", a1)
 # .shape(arreglo) devuelve en una tupla las filas y columnas del arreglo
 forma_a1 = np.shape(a1)
 print("forma_a1", forma_a1)
+
+# la funcion .shape tambien permite reoganizar los datos, asignandole en una tupla la nueva estructura (n_filas, ncolumnas)
+
+a1.shape = (2, 2)
+print("a1.shape = (2,2)", a1)
 
 # .zeros(cantidad)  devuelve un arreglo de una fila con solo 0, en funcion del la cantidad
 # .zeros((filas, columnas))  devuelve una matriz de ceros, en funcion de la tupla pasada (filas, columans)
@@ -124,6 +127,17 @@ Copia por valor => en la asginacion genera una copia del valor, permitiendo que 
 de la primer variable
 nueva_variable = arrelgo.copy()
 
+# retorna la numero en la memoria
+id(variable)   
+
+# devuelve unas banderas propias de los arreglos
+# sirve para ver el valor OWNDATA: si es True es por que una variable inicial, si es False es por que es otra variable pero por referencia
+# arreglo.flags
+
+
+# is permite comparar si son el mismo objeto
+arreglo1 is arreglo2
+
 """
 
 # Accediendo a posiciones de un arreglo
@@ -137,13 +151,13 @@ print("a_acceso[1:5:2]", a_acceso[1:5:2])
 lista_indices = [2, 5]
 print("a_acceso[[2,5]]", a_acceso[lista_indices])
 
-
-
-matriz_1 = np.random.randint(1,10,(5,5))
+# .random.randinit(val_inicial, val_final -1 , (n_filas, n_columnas))
+matriz_1 = np.random.randint(1, 10, (5, 5))
 print("matriz_1", matriz_1)
+
 # accediendo a la misma posicion indicandola con [][] o separa por ,
 print("matriz_1[1][1]", matriz_1[1][1])
-print("matriz_1[1,1]", matriz_1[1,1])
+print("matriz_1[1,1]", matriz_1[1, 1])
 
 # accediendo a rangos dentro de la misma fila
 # accede a las fila 1, de la columna 1 a la 4
@@ -151,10 +165,8 @@ print("matriz_1[1][1:4]", matriz_1[1][1:4])
 print("matriz_1[1, 1:4]", matriz_1[1, 1:4])
 
 # accediendo a indices a partir de una lista
-print("matriz_1[1][[0,2,3]]", matriz_1[1][[0,2,3]])
-print("matriz_1[1, [0,2,3]]", matriz_1[1, [0,2,3]])
-
-
+print("matriz_1[1][[0,2,3]]", matriz_1[1][[0, 2, 3]])
+print("matriz_1[1, [0,2,3]]", matriz_1[1, [0, 2, 3]])
 
 # trasnforma una matriz a un arreglo de 1 sola dimension
 a_arreglo1dm_from_matriz = np.ravel(matriz_1)
@@ -163,3 +175,176 @@ print("a_arreglo1dm_from_matriz", a_arreglo1dm_from_matriz)
 # genera una copia del arreglo
 a_copy_arreglo = a_arreglo1dm_from_matriz.flatten()
 print("a_copy_arreglo", a_copy_arreglo)
+
+# modificando valores en arreglos
+a_modificar = np.arange(0, 10)
+print("a_modificar", a_modificar)
+
+# modifica en las posiciones de 0:3 por valor 20
+a_modificar[0:4] = 20
+print("a_modificar[0:4] = 20 => ", a_modificar)
+
+# modifica en las posiciones de especificas 4,6,7 pasando una lista com oindice
+a_modificar[[4, 6, 7]] = 100
+print("a_modificar[[4,6,7]] = 100 => ", a_modificar)
+
+# modificando posiciones pasando una lista como valor
+a_modificar[[4, 6, 7]] = [900, 1000, 1001]
+print("a_modificar[[4,6,7]] = [900,1000,1001] => ", a_modificar)
+
+# añadiendo un valor al arreglo
+a_modificar = np.append(a_modificar, 9999)
+print("np.append(a_modificar, 9999) =>", a_modificar)
+
+# eliminado una posicion del arreglo
+a_modificar = np.delete(a_modificar, 0)
+print("np.delete(a_modificar, 0) =>", a_modificar)
+
+a_3_dimensiones = np.arange(0, 30)
+# .shape = (2,3,5) => .shape(n_matrices, n_filas_por_matriz, n_columnas_por_matriz)
+a_3_dimensiones.shape = (2, 3, 5)
+print("a_3_dimensiones", a_3_dimensiones)
+print("a_3_dimensiones.ndim", a_3_dimensiones.ndim)
+
+# .reshape( (n_filas, n_columnas) )
+# modifica el tamaño y organizacion de una matriz generando un nuevo arreglo y no modificando el actual
+print("a_3_dimensiones.reshape((3,10))", a_3_dimensiones.reshape((3, 10)))
+
+# arreglo.T
+# arreglo.transpose()
+# permite volvar el orden de columnas hacia filas y filas hacia columnas
+a_transposicion = np.arange(0, 10).reshape(2, 5)
+print("a_transposicion", a_transposicion)
+print("a_transposicion.T", a_transposicion.T)
+
+"""
+Metodos propios de arreglos
+"""
+
+a_operaciones = np.arange(0,10)
+print("a_operaciones", a_operaciones)
+# .sum()
+# suma todos los elementos
+print("a_operaciones.sum()", a_operaciones.sum())
+
+# .min()
+# devuelve el elemento menor
+print("a_operaciones.min()", a_operaciones.min())
+
+# .max()
+# devuelve el elemento mayor
+print("a_operaciones.max()", a_operaciones.max())
+
+# .std()
+# devuelve la desviacion estandar del arreglo
+print("a_operaciones.std()", a_operaciones.std())
+
+# .mean()
+# devuelve la mediadel arreglo
+print("a_operaciones.mean()", a_operaciones.mean())
+
+"""
+Ordenamiento de arreglos
+"""
+a_ordenar = np.random.randint(1,101, 50)
+print("a_ordenar",a_ordenar)
+
+#.sort()
+# ordena el arreglo de forma ascendete
+print("a_ordenar.sort()", a_ordenar.sort())
+
+#[::-1]
+# ordena el arreglo de forma descendente
+print("a_ordenar[::-1]", a_ordenar[::-1])
+
+
+"""
+Funciones para ejecutar en cada posicion del arreglo sin tener que iterarlo
+"""
+a_funciones = np.random.randint(0,11,10)
+print("a_funciones", a_funciones)
+
+def mulitplicar_x_11(val):
+    return val * 11
+
+# se debe vectorizar la funcion
+funcion_multiplicar_x_11_vectorizada = np.vectorize(mulitplicar_x_11)
+
+# una ves vectorizada se le puede pasar a la nueva variable vector el arreglo
+print("funcion_multiplicar_x_11_vectorizada(a_funciones) => ", funcion_multiplicar_x_11_vectorizada(a_funciones))
+
+
+"""
+Valores logicos sobre arreglos, con operadores relacionales
+"""
+
+a_logicos = np.arange(0, 11)
+print("a_logicos", a_logicos)
+
+# arreglo < numero
+# permite trasformar a boooleanos los valores del arreglo compadaro, y segun sea la condicion retornara True o False por cada posicion
+print("a_logicos", a_logicos < 5)
+
+# filtrar un arreglo, pasando en ves de indice una expresion booleana
+# arreglo[arreglo expresion_lofica  valor]
+print("a_logicos[a_logicos < 5]", a_logicos[a_logicos < 5])   # obtendra todos los valores del arreglo que sean menores a 5
+
+# retornara los valores mayores a 2 y menores a 6
+# Operadores de relacion
+# and  =>  &
+# or  =>  |
+
+print("a_logicos[(a_logicos >2 ) & (a_logicos < 6)] => ", a_logicos[(a_logicos >2 ) & (a_logicos < 6)])   # obtendra todos los valores del arreglo que sean menores a 5 y mayores a 2
+
+
+"""
+Comparacion de arreglos con expresiones logicas
+"""
+
+a_1 = np.random.randint(1,5,10)
+a_2 = np.random.randint(1,5,10)
+print("a_1", a_1)
+print("a_2", a_2)
+
+
+# devolvera un arreglo con las mismas posiciones, pero en los valores ira un booleano que representara
+# el valor devuelto despues de evaluar la misma posicion en ambos arreglos
+print("a_1 > a_2", a_1 > a_2)
+# devolvera los valores que esten en ambos arreglos para la misma posicion
+print("a_1[a_1 == a_2]", a_1[a_1 == a_2])
+# devolvera los valores que esten que estan en un arreglo y en el otro no para la misma posicion
+print("a_1[a_1 != a_2]", a_1[a_1 != a_2])
+
+
+"""
+Exportando e importando archivos de NP
+"""
+
+a_data_file = np.arange(0,31)
+print("a_data_file", a_data_file)
+# exportando un archivo los datos
+np.savetxt('./files/file-np.txt', a_data_file)
+# importando en una variable la data de un archivo
+a_upload_file = np.loadtxt('./files/file-np.txt')
+print("a_upload_file", a_upload_file)
+
+
+# guardando en un archivo csv una matriz, especificando el delimiador
+a_data_matriz = np.random.randint(0,101,(10,3))
+print("a_data_matriz", a_data_matriz)
+np.savetxt('./files/files-np.csv', a_data_matriz, delimiter=';')
+
+a_data_matriz_upload = np.loadtxt('./files/files-np.csv',  delimiter=';')
+print("a_data_matriz_upload ", a_data_matriz_upload )
+
+# guardando la matriz en un archivo binario comprimido, con ext .npz
+np.savez('./files/files-np.npz', a_data_matriz)
+# obtenidno la informacion del archivo binario
+a_data_matriz_upload_binary = np.load('./files/files-np.npz')
+print("a_data_matriz_upload_binary", a_data_matriz_upload_binary['arr_0']) # se debe acceder a la posicion ['arr_0'], al obtenerlo desde el binario
+
+
+# leyendo informacion de un archivo, que no esta dado para lectura
+# si en  el archivo hya comentarios los ignorara al giual que las lineas vacias
+data_txt = np.genfromtxt('./files/pruebas_formato.txt', usecols=[1,2], skip_header=1, delimiter=',', skip_footer=1)
+print("data_txt", data_txt)
