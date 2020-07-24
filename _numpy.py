@@ -345,6 +345,6 @@ print("a_data_matriz_upload_binary", a_data_matriz_upload_binary['arr_0']) # se 
 
 
 # leyendo informacion de un archivo, que no esta dado para lectura
-# si en  el archivo hya comentarios los ignorara al giual que las lineas vacias
+# si en  el archivo hya comentarios los ignorara al giual que las lineas vaciasrandint
 data_txt = np.genfromtxt('./files/pruebas_formato.txt', usecols=[1,2], skip_header=1, delimiter=',', skip_footer=1)
 print("data_txt", data_txt)
