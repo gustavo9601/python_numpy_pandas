@@ -32,7 +32,6 @@ forma_a1 = np.shape(a1)
 print("forma_a1", forma_a1)
 
 # la funcion .shape tambien permite reoganizar los datos, asignandole en una tupla la nueva estructura (n_filas, ncolumnas)
-
 a1.shape = (2, 2)
 print("a1.shape = (2,2)", a1)
 
@@ -47,6 +46,8 @@ print("a_zeros_matriz", a_zeros_matriz)
 # .ones(cantidad) mismo que zeros, solo que la rellena de unos
 a_ones = np.ones(10)
 print("a_ones", a_ones)
+# .ones((filas, columnas)) al igual que zeros puede generar una matriz
+a_ones_matriz = np.ones((2,10))
 
 # .full(tupla(filas, columnas), valor_repetir)
 # lo mismo que .zeros pero con un valor por default
@@ -66,7 +67,7 @@ print("a_cuadrado", a_cuadrado)
 a_random = np.random.random((2, 10))  # .random(cantidad)
 print("a_random", a_random)
 
-# .random,randint(valor_inicial, valor_final, (cantidad_filas, cantidad_columnas))
+# .random.randint(valor_inicial, valor_final, (cantidad_filas, cantidad_columnas))
 # permite crear arreglos con valores random definidendo el rango
 a_random_especific = np.random.randint(0, 25, (5, 6))
 print("a_random_especific", a_random_especific)
@@ -119,7 +120,7 @@ print("a_valor_sum * 10", a_valor_sum * 10)
 print("((a_valor_sum * 10) - 50) / 2", ((a_valor_sum * 10) - 50) / 2)
 
 """
-Copia por referencia => es una asignacion temporal de una variable a otra, pero al modificar en la segunda asginacion.
+Copia por referencia => es una asignacion temporal de una variable a otra, pero al modificar en la segunda asignacion.
 modificara los valores de la primer variable
 a = b
 
@@ -176,7 +177,7 @@ print("a_arreglo1dm_from_matriz", a_arreglo1dm_from_matriz)
 a_copy_arreglo = a_arreglo1dm_from_matriz.flatten()
 print("a_copy_arreglo", a_copy_arreglo)
 
-# modificando valores en arreglos
+# np.arange(0, 10) / /arreglo de 0 hasta 9
 a_modificar = np.arange(0, 10)
 print("a_modificar", a_modificar)
 

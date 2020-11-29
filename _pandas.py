@@ -17,7 +17,7 @@ print("serie1", serie1)
 serie2 = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
 print("serie2", serie2)
 
-# accediendo a la serie, pasando una lista como biusqueda
+# accediendo a la serie, pasando una lista como busqueda
 print("serie2[['a', 'd']]", serie2[['a', 'd']])
 
 # Creando una serie a partir de un diccionario, para que venga con los indices y valor
@@ -85,8 +85,12 @@ print("series_fechas_meses", series_fechas_meses)
 # *********************************************************** #
 # Dataframes
 
+# Accediendo de forma directa
+# Primero se accede a columna ['nameColumn'] || .nameColum Luego se accede a la fila u operaciones
+
 # permite crear matricez y colocarles nombre a sus columnas y setear tambien el nombre de las filas para su acceso con indices
 # list() parsea a una lista el iterable
+# df1 = pd.DataFrame(np.random.randn(4, 2), columns=['A','B'])
 df1 = pd.DataFrame(np.random.randn(4, 2), columns=list('AB'))
 print("df1", df1)
 
@@ -128,8 +132,9 @@ df2 = pd.DataFrame(data, columns=['Nombres', 'Edades'])
 print(df2)
 
 # pd from np, asginando nombres a las columnas con columns=[] y a los indices con index=[]
-df3 = pd.DataFrame(np.random.randint(0, 101, (3, 5)), columns=['COLUM_A', 'COLUM_B', 'COLUM_C', 'COLUM_D', 'COLUM_E'],
-                   index=['ROW_A', 'ROW_B', 'ROW_C'])
+df3 = pd.DataFrame(np.random.randint(0, 101, (3, 5)),
+                   columns=['COLUM_A', 'COLUM_B', 'COLUM_C', 'COLUM_D', 'COLUM_E'],   # Nombres columnas
+                   index=['ROW_A', 'ROW_B', 'ROW_C'])   # Nombres Filas para que no sean numericas
 print(df3)
 # Modiciadno el nombre de las columnas, en la misma posicion logica
 df3.columns = 'A', 'B', 'C', 'D', 'E'
@@ -139,7 +144,7 @@ df3.index = 'a', 'b', 'c'
 print(df3)
 # Modificando puntualmente una columna o indice
 # .rename(columna={en diccionario pasa como key el valor actual, y como valor el dato a reemplazar}, index={})
-# se deve realizar la asginacion de nuevo, ya que no modifica el valor por referencia
+# se debe realizar la asginacion de nuevo, ya que no modifica el valor por referencia
 df3 = df3.rename(index={'a': 'A_ROW'}, columns={'A': 'A_COLUMN'})
 print(df3)
 
@@ -152,9 +157,9 @@ print("df3.A_COLUMN[df3.A_COLUMN > 50]", df3.A_COLUMN[df3.A_COLUMN > 50])
 # Accediendo a una posicion fija
 print(df3['A_COLUMN']['A_ROW'])
 
-
-# accediendo a una fila
-# .loc('nombre_fila_indice')
+#==============================================
+# accediendo a una fila por string
+# .loc['nombre_fila_indice']
 print(df3)
 print("df3.loc['A_ROW']", df3.loc['A_ROW'])
 # accediendo a un rango de filas por rango de indices
@@ -170,8 +175,8 @@ print("df3.loc[df3.A_COLUMN > 50]", df3.loc[df3.A_COLUMN > 50, ['A_COLUMN', 'E']
 print("df3.loc[df3.A_COLUMN > 10]", df3.loc[df3.A_COLUMN > 10, ['A_COLUMN', 'E']].sort_values('A_COLUMN', ascending=False).head(2))
 
 
-# accediendo a una fila por posicion
-# .iloc(posicion_indice)
+# accediendo a una fila por posicion entero
+# .iloc[posicion_indice]
 print("df3.iloc[0]", df3.iloc[0])
 
 # Ontemniendo un rango de filas, por un rango de indices
@@ -193,7 +198,7 @@ df_calificaciones = pd.DataFrame(diccionario_df_calificaciones)
 print(df_calificaciones)
 
 # .apply(function, axis=1|0)
-# funcion => retornara el valor, a evaluar por cada iteracion // En base a la modificacion se retornara una serie pero no modifica el DF original
+# funcion => retornara el valor, a evaluar por cada iteracion // En base a la modificacion se retornara una serie
 # axis = 0|1 indicara si recorre fila a fila o columna por columna, 1 => fila | 0 => columna
 # row['edades'] en cada iteracion retorna una fila, por ende accedemos de esa forma y le sumamos + 1 a cada valor
 df_calificaciones['edades'] = df_calificaciones.apply(lambda row: row['edades'] + 1, axis=1)

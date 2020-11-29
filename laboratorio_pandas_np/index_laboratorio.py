@@ -25,7 +25,7 @@ print(df_store.loc[(df_store.Order_ID.str.endswith('156')) & (df_store.Product_N
                                                                                                            'Product_Name']])
 
 # Traer El modo de envio par todas las ciudades menois para Henderson
-print('# Traer El modo de envio par todas las ciudades menois para Henderson')
+print('# Traer El modo de envio par todas las ciudades menos para Henderson')
 print(df_store.loc[df_store.City != 'Henderson', ['Ship Mode', 'City']])
 
 # Traer las ordenes id, el cliente para las ciudades de Los Angeles, Madison y Wet Jordan que tengan mas de 2 cantidades los primeros 100 registros
