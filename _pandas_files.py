@@ -16,19 +16,41 @@ data = {
 # columns = [] recibe en un arreglo, el ordenamiento y nombre de columna que queremos mostrar  // el nombre debe ser el mismo que se define en la data
 df2 = pd.DataFrame(data, columns=['Nombres', 'Edades'])
 
-# exportar el dataframe a csv
+# Exportar el dataframe a csv
 # columns=[nombres_columnas]  // define que columnas poner en el archivo
 # index=False  / le remueve los indices numericos por default
+# sep='|'  // Separador del csv
 df2.to_csv('files/df2.csv')
-sys.exit()
 
-# importamos el csv generado anteriormente
+# Export el dataframe a xlsx
+# sheet_name = "Name of the page" // Especificando el nombre de la hoja
+# index=False  / le remueve los indices numericos por default
+df2.to_excel('files/test.xlsx', index=False)
+
+# Export el dataframe a json
+df2.to_json('files/test.json')
+
+# Export a pickle
+df2.to_pickle('files/test.pkl')
+
+
+# Importamos el csv generado anteriormente
 # delimiter='caracter'  // caracter de separacion
+# sep='|'  // Separador del csv
 # header= n_fila  // especifica a partir de que fila empieza a leer
 # usecols=['nombre_columnas']  // espefica que columnas se deben leer del archivo
 # na_values=['posibles concidencias encontradas'] // reemplaza por NaN cualquier valor que cocuerde con el parametro pasado
 # .read_csv('./path/file', delimiter='caracter', header=1, usecols=['col_name'], na_values=['N/A'])
-df3 = pd.read_csv('df2.csv')
+df3 = pd.read_csv('files/df2.csv')
+
+# Importamos desde un excel
+pd.read_excel('files/test.xlsx')
+
+# Importamos dede un json
+pd.read_json('files/test.json')
+
+# Importamos desde in pkl
+pd.read_pickle('files/test.pkl')
 
 # Permite mostrar los 5 primeros registros, o si se pasa por parametro el n rows
 # .head() | .head(n_rows)
