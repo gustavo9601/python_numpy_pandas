@@ -1,10 +1,15 @@
 # pip install pandas
 
+"""
+Pandas => Panel Data
+"""
+
 import pandas as pd
 import numpy as np
 import sys
 # sys.exit()
 
+print("Version pandas >>>>", pd.__version__)
 # serie  => arreglo de una dimencion, que permite generar el indice de cada posicion numerico o string, funciona todas las funciones del arreglo
 # dataframe => similar a una matriz extendida, como una hoja de excel, para almacenar el nombre de las filas y columnas
 
@@ -20,6 +25,8 @@ print("serie2", serie2)
 # accediendo a la serie, pasando una lista como busqueda
 print("serie2[['a', 'd']]", serie2[['a', 'd']])
 
+
+
 # Creando una serie a partir de un diccionario, para que venga con los indices y valor
 diccionario1 = {
     'a': 100,
@@ -34,6 +41,9 @@ print("serie_from_diccionario", serie_from_diccionario)
 serie_from_np = pd.Series(np.arange(0, 5), index=['a', 'b', 'c', 'd', 'e'])
 print("serie_from_np", serie_from_np)
 
+
+# devuelve tamaño de la serie
+print("serie_from_diccionario.shape", serie_from_diccionario.shape)
 # devuelve los inidces
 print("serie_from_diccionario.index", serie_from_diccionario.index)
 # devuelve los valores
@@ -48,6 +58,8 @@ print("serie_from_np con nombres en columnas", serie_from_np)
 print("serie_from_np *10", serie_from_np * 10)
 # filtros con operadores logicos al ser tambien un arreglo de una dimension
 print("serie_from_np[serie_from_np > 2]", serie_from_np[serie_from_np > 2])
+# filtro puntual por varias posiciones
+print("serie_from_np[['a', 'd']]", serie_from_np[['a', 'd']])
 
 # serie generada con NaN nulos
 serie_con_nulos = pd.Series([1, 2, 3, np.NaN, 5, 6, np.NaN, 7])
@@ -62,7 +74,8 @@ serie_con_nulos = serie_con_nulos.dropna()
 print("serie_con_nulos.dropna()", serie_con_nulos)
 
 # Seleccionado los elementos que nos son nulos
-# serie.notnull()
+# serie.notnull() // devuelve una Serie con booleanos identificando cuales no son nulos como True,
+# al ser pasado como parametro permite filtrar la serie a los que tengan True
 print("serie_con_nulos[serie_con_nulos.notnull()]", serie_con_nulos[serie_con_nulos.notnull()])
 
 # acceso por posicion
@@ -113,11 +126,11 @@ print("df_from_diccionario['nombre']", df_from_diccionario['nombre'])
 # dataframe.nombreColumna.values
 print("df_from_diccionario.edad.values", df_from_diccionario.edad.values)
 
-# obteneidno el nombre de las columnas
+# Obteniendo el nombre de las columnas
 print("df_from_diccionario.colums", df_from_diccionario.columns)
-# obteneidno los indices
+# Obteniendo los indices
 print("df_from_diccionario.index", df_from_diccionario.index)
-# obteneidno los solos los valores como arreglo matriz
+# Obteniendo los solos los valores como arreglo matriz
 print("df_from_diccionario.values", df_from_diccionario.values)
 
 # Genera un data frame similar  aun excel page
@@ -173,6 +186,11 @@ print("df3.loc[df3.A_COLUMN > 50]", df3.loc[df3.A_COLUMN > 50, ['A_COLUMN', 'E']
 # listando todos las filas en base auna condicion por columna, y especificando en una lista el nombre de columnas a mostrar
 # y con sort_values('nombre columna') ordenamos acedentemente por columa, y con head(n_filas) especificamos el numero de filas a mostrar
 print("df3.loc[df3.A_COLUMN > 10]", df3.loc[df3.A_COLUMN > 10, ['A_COLUMN', 'E']].sort_values('A_COLUMN', ascending=False).head(2))
+# Filtro sobre una varias columnas que complan la condicion
+print("df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)] ", df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)] )
+# Otra forma de ejecutar el query
+print("df3.query('A_COLUMN > 50')", df3.query('A_COLUMN > 50'))
+print("df3.query('A_COLUMN > 50 & B < 65')", df3.query('A_COLUMN > 50 & B < 65'))
 
 
 # accediendo a una fila por posicion entero
@@ -207,72 +225,3 @@ print(df_calificaciones)
 
 
 
-# *********************************************************** #
-# *********************************************************** #
-# *********************************************************** #
-# *********************************************************** #
-# Exportar e importar a CSV
-
-# exportar el dataframe a csv
-# columns=[nombres_columnas]  // define que columnas poner en el archivo
-# index=False  / le remueve los indices numericos por default
-df2.to_csv('df2.csv')
-
-# importamos el csv generado anteriormente
-# delimiter='caracter'  // caracter de separacion
-# header= n_fila  // especifica a partir de que fila empieza a leer
-# usecols=['nombre_columnas']  // espefica que columnas se deben leer del archivo
-# na_values=['posibles concidencias encontradas'] // reemplaza por NaN cualquier valor que cocuerde con el parametro pasado
-# .read_csv('./path/file', delimiter='caracter', header=1, usecols=['col_name'], na_values=['N/A'])
-df3 = pd.read_csv('df2.csv')
-
-# Permite mostrar los 5 primeros registros, o si se pasa por parametro el n rows
-# .head() | .head(n_rows)
-print("df3.head()", df3.head())
-
-# Permite mostrar los 5 ultimos registros, o si se pasa por parametro el n rows
-# .tail() | .tail(n_rows)
-print("df3.tail()", df3.tail())
-
-# accediendo a los datos de una columna extraida del csv
-print(df3.Edades)
-
-
-# modificando los valores de una columna extradia con apply, mulitplicando por 2 la edad de cada fila
-df3.Edades = df3.apply(lambda row: row['Edades'] * 2, axis=1)
-print(df3)
-
-####
-# Ordenamiento de DF
-
-#Ordenara por indices o filas
-#.sort_index() # ascending=False  lo ordena de forma descendente
-print("df3.sort_index(ascending=False)", df3.sort_index(ascending=False))
-
-# Ordenar por columna
-# .sort_values('nombre_columna') # ascending=False  lo ordena de forma descendente
-print(df3.sort_values('Edades'))
-
-
-####
-#  Modificacion de un DF
-df_modificacion = pd.DataFrame(np.arange(16).reshape(4,4), columns=list('ABCD'), index=list('abcd'))
-print(df_modificacion)
-
-# primero se ingresa por columna y luego a la fila df_modificacion.COLUMNA.FILA
-print("df_modificacion.A.b", df_modificacion.A.b)
-print("df_modificacion['A']['b']", df_modificacion['A']['b'])
-# a la posicion de l matriz le seteamos un valor
-df_modificacion['A']['b'] = 900
-print(df_modificacion)
-# a toda una columna le seteamos os valores
-df_modificacion.A = 1000,800,600,200
-print(df_modificacion)
-# eliminar una columna o una fila en funcion del axis
-# .drop('nombre_columna', axis=1|0)  1=columnas 0=filas
-df_modificacion = df_modificacion.drop('D', axis=1)
-print(df_modificacion)
-#  insertando una columna al DF
-# .insert(posicion,'nombre_columna', [lista_valores])
-df_modificacion.insert(1,'Z', [999,998,997,996])
-print(df_modificacion)
