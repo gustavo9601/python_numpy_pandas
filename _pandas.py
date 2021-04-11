@@ -223,5 +223,17 @@ df_calificaciones['edades'] = df_calificaciones.apply(lambda row: row['edades'] 
 print(df_calificaciones)
 
 
+# setean pandas para que para que todo los que se importe sin valor sea nan
+# pd.options.mode.use_inf_as_na = True
 
+# Permite asignar 0 a los valores nan
+# df.fillna(0)
 
+# Permite eliminar para la o las columnas los valores nan
+# df[['a']].dropna()
+
+# todo lo que sea nan, lo reemplazara por el siguiente valor no nan
+# df.fillna(method="ffill")
+
+# todo lo que sea nan, lo reemplazara por el anterior valor no nan
+# df.fillna(method="bfill")

@@ -1,8 +1,6 @@
 import pandas as pd
-import numpy as np
-import sys
 
-# Definiendo el formateo decimal
+# Set format display values in PD
 pd.options.display.float_format = '{:,.1f}'.format
 
 df_meteorites = pd.read_csv('../db/Meteorite_Landings.csv')

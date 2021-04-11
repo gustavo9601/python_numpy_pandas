@@ -1,7 +1,6 @@
 import pandas as pd
-import numpy as np
 
-df_store = pd.read_csv('./store.csv', delimiter=';', encoding="ISO-8859-1",
+df_store = pd.read_csv('../db/store.csv', delimiter=';', encoding="ISO-8859-1",
                        usecols=['Order_ID', 'Order_Date', 'Ship Date', 'Ship Mode', 'Customer ID', 'Customer Name',
                                 'City', 'Product ID', 'Category', 'Product_Name', 'Sales', 'Quantity'])
 print(df_store.head())
