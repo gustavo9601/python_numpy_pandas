@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_stores_filters.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_tips.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/API_AG.LND.AGRI.K2_DS2_en_csv_v2_716226.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/API_AG.LND.FRST.K2_DS2_en_csv_v2_716262.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/API_EG.USE.ELEC.KH.PC_DS2_en_csv_v2_715482.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/API_EN.ATM.CO2E.KT_DS2_en_csv_v2_713263.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/API_SP.POP.TOTL_DS2_en_csv_v2_713131.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteoites.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteorites.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_sns.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_stores.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_climate.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_climate_trasnform_and_filters.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Big Data/Big data aplicada a los negocios/big_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -204,7 +205,7 @@
       <workItem from="1618450567740" duration="11125000" />
       <workItem from="1618634729355" duration="46000" />
       <workItem from="1618783500557" duration="1533000" />
-      <workItem from="1618785112788" duration="12492000" />
+      <workItem from="1618785112788" duration="18042000" />
     </task>
     <servers />
   </component>
