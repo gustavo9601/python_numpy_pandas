@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_population.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_seaborn.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_stores_filters.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_tips.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteorites.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteroites.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteoites.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_population.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteoites.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteorites.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_sns.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_stores.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +204,7 @@
       <workItem from="1618450567740" duration="11125000" />
       <workItem from="1618634729355" duration="46000" />
       <workItem from="1618783500557" duration="1533000" />
-      <workItem from="1618785112788" duration="9665000" />
+      <workItem from="1618785112788" duration="12492000" />
     </task>
     <servers />
   </component>
