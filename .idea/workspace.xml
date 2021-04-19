@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_london.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_meteroites.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_duplicates.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_coronavirus.py.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_coronavirus.py.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_london.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,7 @@
       <workItem from="1618450567740" duration="11125000" />
       <workItem from="1618634729355" duration="46000" />
       <workItem from="1618783500557" duration="1533000" />
-      <workItem from="1618785112788" duration="5173000" />
+      <workItem from="1618785112788" duration="8385000" />
     </task>
     <servers />
   </component>
