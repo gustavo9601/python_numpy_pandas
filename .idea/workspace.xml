@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/eluniversal_articles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_eluniversal_newspaper.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +43,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Big Data/Big data aplicada a los negocios/big_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\db" />
+      <recent name="C:\xampp\htdocs\python\python_numpy_pandas" />
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\laboratorio_pandas_np" />
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\graficas_matplotlib" />
     </key>
@@ -200,6 +203,7 @@
       <workItem from="1618634729355" duration="46000" />
       <workItem from="1618783500557" duration="1533000" />
       <workItem from="1618785112788" duration="18902000" />
+      <workItem from="1621394875759" duration="5146000" />
     </task>
     <servers />
   </component>
