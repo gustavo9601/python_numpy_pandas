@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/eluniversal_articles.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_eluniversal_newspaper.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/27.1_WordsByCharacter.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_lord_of_king.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/_pandas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +204,10 @@
       <workItem from="1618634729355" duration="46000" />
       <workItem from="1618783500557" duration="1533000" />
       <workItem from="1618785112788" duration="18902000" />
-      <workItem from="1621394875759" duration="5146000" />
+      <workItem from="1621394875759" duration="6385000" />
+      <workItem from="1621570055485" duration="685000" />
+      <workItem from="1622092665030" duration="2627000" />
+      <workItem from="1623294466639" duration="4391000" />
     </task>
     <servers />
   </component>

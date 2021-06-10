@@ -25,8 +25,6 @@ print("serie2", serie2)
 # accediendo a la serie, pasando una lista como busqueda
 print("serie2[['a', 'd']]", serie2[['a', 'd']])
 
-
-
 # Creando una serie a partir de un diccionario, para que venga con los indices y valor
 diccionario1 = {
     'a': 100,
