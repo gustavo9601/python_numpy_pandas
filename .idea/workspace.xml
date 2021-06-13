@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/27.1_WordsByCharacter.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_lord_of_king.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/_pandas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -207,7 +204,8 @@
       <workItem from="1621394875759" duration="6385000" />
       <workItem from="1621570055485" duration="685000" />
       <workItem from="1622092665030" duration="2627000" />
-      <workItem from="1623294466639" duration="4391000" />
+      <workItem from="1623294466639" duration="5099000" />
+      <workItem from="1623610865475" duration="736000" />
     </task>
     <servers />
   </component>
