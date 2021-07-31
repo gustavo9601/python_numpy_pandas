@@ -46,10 +46,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\python\python_numpy_pandas\db" />
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas" />
-      <recent name="C:\xampp\htdocs\python\python_numpy_pandas\laboratorio_pandas_np" />
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\graficas_matplotlib" />
+      <recent name="C:\xampp\htdocs\python\python_numpy_pandas\db" />
+      <recent name="C:\xampp\htdocs\python\python_numpy_pandas\laboratorio_pandas_np" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\python\python_numpy_pandas\db" />
@@ -205,7 +205,8 @@
       <workItem from="1621570055485" duration="685000" />
       <workItem from="1622092665030" duration="2627000" />
       <workItem from="1623294466639" duration="5099000" />
-      <workItem from="1623610865475" duration="736000" />
+      <workItem from="1623610865475" duration="1687000" />
+      <workItem from="1627768424452" duration="682000" />
     </task>
     <servers />
   </component>
