@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/_numpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/files-np.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/files-np.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/files-np.npz" beforeDir="false" afterPath="$PROJECT_DIR$/files/files-np.npz" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +210,9 @@
       <workItem from="1623294466639" duration="5099000" />
       <workItem from="1623610865475" duration="1687000" />
       <workItem from="1627768424452" duration="682000" />
+      <workItem from="1633530501374" duration="3103000" />
+      <workItem from="1640574959089" duration="39000" />
+      <workItem from="1649988500383" duration="6085000" />
     </task>
     <servers />
   </component>
@@ -214,14 +220,14 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$dispersion.coverage" NAME="dispersion Coverage Results" MODIFIED="1595290791167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$2_lineas__1_.coverage" NAME="2_lineas (1) Coverage Results" MODIFIED="1595289941506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$barras2.coverage" NAME="barras2 Coverage Results" MODIFIED="1595290443972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$index_laboratorio.coverage" NAME="index_laboratorio Coverage Results" MODIFIED="1595579096257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/laboratorio_pandas_np" />
+    <SUITE FILE_PATH="coverage/python_numpy_pandas$_matplotlib.coverage" NAME="_matplotlib Coverage Results" MODIFIED="1595289725538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$barras.coverage" NAME="barras Coverage Results" MODIFIED="1595290099280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$_numpy.coverage" NAME="_numpy Coverage Results" MODIFIED="1595310118866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$pie.coverage" NAME="pie Coverage Results" MODIFIED="1595290664187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$_matplotlib.coverage" NAME="_matplotlib Coverage Results" MODIFIED="1595289725538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$2_lineas__1_.coverage" NAME="2_lineas (1) Coverage Results" MODIFIED="1595289941506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$dispersion.coverage" NAME="dispersion Coverage Results" MODIFIED="1595290791167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
     <SUITE FILE_PATH="coverage/python_numpy_pandas$_pandas.coverage" NAME="_pandas Coverage Results" MODIFIED="1595574430008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$barras2.coverage" NAME="barras2 Coverage Results" MODIFIED="1595290443972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graficas_matplotlib" />
-    <SUITE FILE_PATH="coverage/python_numpy_pandas$index_laboratorio.coverage" NAME="index_laboratorio Coverage Results" MODIFIED="1595579096257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/laboratorio_pandas_np" />
   </component>
 </project>
