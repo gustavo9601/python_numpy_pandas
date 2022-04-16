@@ -37,6 +37,7 @@ df2.to_pickle('files/test.pkl')
 # Importamos el csv generado anteriormente
 # delimiter='caracter'  // caracter de separacion
 # sep='|'  // Separador del csv
+# names = ['title1', 'titl2']   // especifica el nombre de las columnas cambiandolo en el df
 # header= n_fila  // especifica a partir de que fila empieza a leer
 # usecols=['nombre_columnas']  // espefica que columnas se deben leer del archivo
 # na_values=['posibles concidencias encontradas'] // reemplaza por NaN cualquier valor que cocuerde con el parametro pasado
@@ -47,6 +48,7 @@ df3 = pd.read_csv('files/df2.csv')
 pd.read_excel('files/test.xlsx')
 
 # Importamos dede un json
+#  type='series' // epepecifica si en serie o df se quiere abrir
 pd.read_json('files/test.json')
 
 # Importamos desde in pkl

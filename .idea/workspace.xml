@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/_numpy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/files-np.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/files-np.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/files-np.npz" beforeDir="false" afterPath="$PROJECT_DIR$/files/files-np.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/_pandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pandas_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/_pandas_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -172,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pie" />
         <item itemvalue="Python.lab_stores" />
+        <item itemvalue="Python.dispersion" />
         <item itemvalue="Python._pandas" />
         <item itemvalue="Python._numpy" />
-        <item itemvalue="Python.dispersion" />
-        <item itemvalue="Python.pie" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +212,11 @@
       <workItem from="1627768424452" duration="682000" />
       <workItem from="1633530501374" duration="3103000" />
       <workItem from="1640574959089" duration="39000" />
-      <workItem from="1649988500383" duration="6085000" />
+      <workItem from="1649988500383" duration="6732000" />
+      <workItem from="1650059529506" duration="1011000" />
+      <workItem from="1650060584119" duration="93000" />
+      <workItem from="1650060697776" duration="1762000" />
+      <workItem from="1650067082004" duration="1641000" />
     </task>
     <servers />
   </component>

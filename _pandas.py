@@ -1,4 +1,7 @@
 # pip install pandas
+import numpy as np
+import numpy as np
+import pandas as pd
 
 """
 Pandas => Panel Data
@@ -6,7 +9,9 @@ Pandas => Panel Data
 
 import pandas as pd
 import numpy as np
+from devtools import debug
 import sys
+
 # sys.exit()
 
 print("Version pandas >>>>", pd.__version__)
@@ -18,7 +23,7 @@ print("Version pandas >>>>", pd.__version__)
 serie1 = pd.Series([1, 2, 3, 4])
 print("serie1", serie1)
 
-# especificamos los dicndes para cada posiocion
+# especificamos los indices para cada posicion
 serie2 = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
 print("serie2", serie2)
 
@@ -38,7 +43,6 @@ print("serie_from_diccionario", serie_from_diccionario)
 # diccionario desde valores generados por np
 serie_from_np = pd.Series(np.arange(0, 5), index=['a', 'b', 'c', 'd', 'e'])
 print("serie_from_np", serie_from_np)
-
 
 # devuelve tamaño de la serie
 print("serie_from_diccionario.shape", serie_from_diccionario.shape)
@@ -144,8 +148,8 @@ print(df2)
 
 # pd from np, asginando nombres a las columnas con columns=[] y a los indices con index=[]
 df3 = pd.DataFrame(np.random.randint(0, 101, (3, 5)),
-                   columns=['COLUM_A', 'COLUM_B', 'COLUM_C', 'COLUM_D', 'COLUM_E'],   # Nombres columnas
-                   index=['ROW_A', 'ROW_B', 'ROW_C'])   # Nombres Filas para que no sean numericas
+                   columns=['COLUM_A', 'COLUM_B', 'COLUM_C', 'COLUM_D', 'COLUM_E'],  # Nombres columnas
+                   index=['ROW_A', 'ROW_B', 'ROW_C'])  # Nombres Filas para que no sean numericas
 print(df3)
 # Modiciadno el nombre de las columnas, en la misma posicion logica
 df3.columns = 'A', 'B', 'C', 'D', 'E'
@@ -168,7 +172,17 @@ print("df3.A_COLUMN[df3.A_COLUMN > 50]", df3.A_COLUMN[df3.A_COLUMN > 50])
 # Accediendo a una posicion fija
 print(df3['A_COLUMN']['A_ROW'])
 
-#==============================================
+# =============================================
+# slicing de un df como un array
+print(df3)
+print("df3[0:3]", df3[0:3])
+
+# =============================================
+# seleccion de columnas
+print(df3)
+print("df3[0:3]", df3[['A_COLUMN', 'B', 'C']])
+
+# ==============================================
 # accediendo a una fila por string
 # .loc['nombre_fila_indice']
 print(df3)
@@ -177,30 +191,33 @@ print("df3.loc['A_ROW']", df3.loc['A_ROW'])
 print("df3.loc['b':'c']", df3.loc['b':'c'])
 # accediendo a un rango de filas por rango de indices Y Obteniendo una o mas columnas, pasando en una lista el nombre de columnas
 print("df3.loc['b':'c',['A_COLUMN']]", df3.loc['b':'c', ['A_COLUMN']])
+
 # listando todos las filas en base auna condicion por columna
 print("df3.loc[df3.A_COLUMN > 50]", df3.loc[df3.A_COLUMN > 50])
 # listando todos las filas en base auna condicion por columna, y especificando en una lista el nombre de columnas a mostrar
 print("df3.loc[df3.A_COLUMN > 50]", df3.loc[df3.A_COLUMN > 50, ['A_COLUMN', 'E']])
 # listando todos las filas en base auna condicion por columna, y especificando en una lista el nombre de columnas a mostrar
 # y con sort_values('nombre columna') ordenamos acedentemente por columa, y con head(n_filas) especificamos el numero de filas a mostrar
-print("df3.loc[df3.A_COLUMN > 10]", df3.loc[df3.A_COLUMN > 10, ['A_COLUMN', 'E']].sort_values('A_COLUMN', ascending=False).head(2))
+print("df3.loc[df3.A_COLUMN > 10]",
+      df3.loc[df3.A_COLUMN > 10, ['A_COLUMN', 'E']].sort_values('A_COLUMN', ascending=False).head(2))
 # Filtro sobre una varias columnas que complan la condicion
-print("df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)] ", df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)] )
+print("df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)] ", df3[(df3['A_COLUMN'] >= 15) & (df3['A_COLUMN'] <= 50)])
 # Otra forma de ejecutar el query
 print("df3.query('A_COLUMN > 50')", df3.query('A_COLUMN > 50'))
 print("df3.query('A_COLUMN > 50 & B < 65')", df3.query('A_COLUMN > 50 & B < 65'))
 
-
-# accediendo a una fila por posicion entero
+# accediendo a una fila por position entero
 # .iloc[posicion_indice]
 print("df3.iloc[0]", df3.iloc[0])
 
-# Ontemniendo un rango de filas, por un rango de indices
+# Obteniendo un rango de filas, por un rango de indices
 print("df3.iloc[0:2]", df3.iloc[0:2])
 
-# Ontemniendo un rango de filas, por un rango de indices, idnciando que columnas mostrar pero pasando la posicion de la columna en una lista
-print("df3.iloc[0:2]", df3.iloc[0:2 , [0]])
+# Obteniendo un rango de filas, por un rango de indices, indicando que columnas mostrar pero pasando la posicion de la columna en una lista
+print("df3.iloc[0:2]", df3.iloc[0:2, [0]])
 
+# Obteniendo desde el inicio hasta la fila 2, y desde la columna 2 al final
+print("df3.iloc[:2 , 2:]", df3.iloc[:2, 2:])
 
 ##########################
 # Aplicando funciones sobre un DF
@@ -220,18 +237,80 @@ print(df_calificaciones)
 df_calificaciones['edades'] = df_calificaciones.apply(lambda row: row['edades'] + 1, axis=1)
 print(df_calificaciones)
 
-
 # setean pandas para que para que todo los que se importe sin valor sea nan
-# pd.options.mode.use_inf_as_na = True
+pd.options.mode.use_inf_as_na = True
+df = pd.DataFrame(diccionario_df_calificaciones)
 
-# Permite asignar 0 a los valores nan
-# df.fillna(0)
+# Permite asignar un valor a los valores nan
+print("df.fillna(0)", df.fillna(0))
 
 # Permite eliminar para la o las columnas los valores nan
-# df[['a']].dropna()
+print("df[['usuarios']].dropna()", df[['usuarios']].dropna())
 
 # todo lo que sea nan, lo reemplazara por el siguiente valor no nan
-# df.fillna(method="ffill")
+print("df.fillna(method='ffill')", df.fillna(method="ffill"))
 
 # todo lo que sea nan, lo reemplazara por el anterior valor no nan
-# df.fillna(method="bfill")
+print("df.fillna(method='bfill'", df.fillna(method="bfill"))
+
+# ===============================================================
+# Eliminando filas y columnas
+
+# Eliminando columnas // axis = 0 Filas | 1 Columnas
+# inplace=True // modifica por referencia el df
+print("df.drop('usuarios', axis=1)", df.drop('usuarios', axis=1))
+print("df.drop(2, axis=0)", df.drop(2, axis=0))
+print("df.drop([0, 2], axis=0)", df.drop([0, 2], axis=0))
+
+# ===============================================================
+# Añadir Columnas
+
+# Añadiendo columna con nan
+df['Nueva_columna_nan'] = np.nan
+print("df columna nan", df)
+
+df['Calificaciones_al_cuadrado'] = df['calificaciones'] ** 2
+print("df columna calificaciones ** 2 ")
+print(df)
+
+new_column = np.arange(0, df.shape[0])
+df['Nueva_columna_arange'] = new_column
+print("df columna arange")
+print(df)
+
+
+# Añadir filas
+
+print('Añadiendo el mismo df en si al final')
+print(df.append(df))
+print('Añadiendo una fila desde dict')
+diccionario_df_calificaciones_row = {
+    'usuarios': 'Oscar',
+    'calificaciones': 10,
+    'edades': np.nan,
+    'Nueva_columna_nan': 4,
+    'Calificaciones_al_cuadrado' : 100,
+    'Nueva_columna_arange' : np.nan
+}
+df = df.append(diccionario_df_calificaciones_row, ignore_index=True)
+print(df)
+
+print('Rellenando valores nan')
+print(df.fillna(500))
+print('Rellenando valores nan especifica columna')
+print(df['Nueva_columna_arange'].fillna(1000))
+
+# interpolate // en valores numericos hace una inferencia en los valores de la columna
+print('df interpolate')
+print(df.interpolate())
+
+
+# ==========================================
+# Filtros
+# ~ // se usa para negar la condicion en el filtro
+filtro_1 = df['calificaciones'] > 8  # Genera una serie de booleanos
+print("filtro_1", filtro_1)
+filtro_2 = df['usuarios'].str.contains("G")
+print("filtro_2", filtro_2)
+print('Aplicando los filtros')
+print(df[filtro_1 & filtro_2])
