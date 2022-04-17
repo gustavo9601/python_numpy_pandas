@@ -48,7 +48,7 @@ print("serie_from_np", serie_from_np)
 print("serie_from_diccionario.shape", serie_from_diccionario.shape)
 # devuelve los inidces
 print("serie_from_diccionario.index", serie_from_diccionario.index)
-# devuelve los valores
+# devuelve los valores de la Serie o el DF a un arreglo de np
 print("serie_from_diccionario.values", serie_from_diccionario.values)
 # trasnforma los indices a arreglo
 print("serie_from_np.index.tolist()", serie_from_np.index.tolist())
@@ -261,6 +261,9 @@ print("df.fillna(method='bfill'", df.fillna(method="bfill"))
 print("df.drop('usuarios', axis=1)", df.drop('usuarios', axis=1))
 print("df.drop(2, axis=0)", df.drop(2, axis=0))
 print("df.drop([0, 2], axis=0)", df.drop([0, 2], axis=0))
+# drop_duplicates()  // eliminar duplicados
+# keep='last'  // last | first  // controla cual deja o cual elimina
+print("df.drop_duplicates", df.drop_duplicates(keep='last'))
 
 # ===============================================================
 # Añadir Columnas
@@ -278,7 +281,6 @@ df['Nueva_columna_arange'] = new_column
 print("df columna arange")
 print(df)
 
-
 # Añadir filas
 
 print('Añadiendo el mismo df en si al final')
@@ -289,8 +291,8 @@ diccionario_df_calificaciones_row = {
     'calificaciones': 10,
     'edades': np.nan,
     'Nueva_columna_nan': 4,
-    'Calificaciones_al_cuadrado' : 100,
-    'Nueva_columna_arange' : np.nan
+    'Calificaciones_al_cuadrado': 100,
+    'Nueva_columna_arange': np.nan
 }
 df = df.append(diccionario_df_calificaciones_row, ignore_index=True)
 print(df)
@@ -304,7 +306,6 @@ print(df['Nueva_columna_arange'].fillna(1000))
 print('df interpolate')
 print(df.interpolate())
 
-
 # ==========================================
 # Filtros
 # ~ // se usa para negar la condicion en el filtro
@@ -314,3 +315,154 @@ filtro_2 = df['usuarios'].str.contains("G")
 print("filtro_2", filtro_2)
 print('Aplicando los filtros')
 print(df[filtro_1 & filtro_2])
+
+# ===================================
+# Building functions informacion
+
+# .info() // informacion relevante del dataset
+print("df.info()", df.info())
+# .describe() // datos estadisticos de las columnas numericas
+print("df.describe()", df.describe())
+# .head(n) // primeros registros
+print("df.head()", df.head())
+# .tail(n) // ultimos registros
+print("df.tail()", df.tail())
+# .memory_usage(deep=True)  // Informacion sobre la memoria que consume el dataset
+print("df.memory_usage()", df.memory_usage(deep=True))
+# .value_counts()  // agrupa y cuenta las veces que se repite
+print("df['usuarios'].value_counts()", df['usuarios'].value_counts())
+
+# .skew()  // saber el sesgo de los campos numericos
+"""
+Si γ 1 > 0 la distribución es asimétrica positiva o a la derecha.
+Si γ 1 < 0 la distribución es asimétrica negativa o a la izquierda.
+"""
+print("df.skew()", df['Calificaciones_al_cuadrado'].skew())
+
+# =================================================
+# Cambiar el tipo de dato
+# .astype('string')  // tipo
+df['usuarios'] = df['usuarios'].astype('string')
+print(df['usuarios'])
+
+# ===============================================
+# Group by & funciones de agregacion
+
+"""
+.count()
+.mean()
+.sum()
+.min()
+.max()
+"""
+print(df.groupby('usuarios').count())
+# mas de un nivel de agrupacion
+print(df.groupby(['usuarios', 'edades']).count())
+# .reset_index()  // deja el indice normal, y quita el de la columna usuario como indice
+print(df.groupby('usuarios').count().reset_index())
+# varias funciones de agregacion por cada una de las columnas
+print(df.groupby('usuarios').agg(['min', 'max', 'sum', 'mean']))
+# especificando la columna y las funciones a aplicar
+print(df.groupby('usuarios').agg({'edades': ['mean', 'max'], 'Calificaciones_al_cuadrado': ['min', 'max']}))
+# ejecutando funciones lamda o propias sobre la agrupacion
+print(df.groupby('usuarios').agg({'edades': lambda x: [i + 20 for i in x]}))
+
+# ===============================================
+# Buscar b | Join | Cruzar df
+data_1 = {
+    'key': ['1', '2', '3'],
+    'A': ['A0', 'A1', 'A2'],
+    'B': ['B0', 'B1', 'B2'],
+    'C': ['C0', 'C1', 'C2'],
+}
+
+data_2 = {
+    'key': ['1', '2', '4'],
+    'A': ['A4', 'A5', 'A6'],
+    'B': ['B4', 'B5', 'B6'],
+    'C': ['C4', 'C5', 'C6'],
+}
+
+df_1 = pd.DataFrame(data_1)
+df_2 = pd.DataFrame(data_2)
+
+# merge // es un inner join
+# on='' llave de relacion
+print(df_1.merge(df_2, on='key'))
+# especificando cual es la llave en el df izquierda y cual en el de la derecha
+# left_on='key', right_on='key'
+print(df_1.merge(df_2, left_on='key', right_on='key'))
+# how = left | right | inner  // especifica el tipo de cruce a ejecutar
+print(df_1.merge(df_2, left_on='key', right_on='key', how='left'))
+
+# Concatenar | añadir los valores por el axis // 0 filas | 1 columnas
+# .concat([df1, df2 ....], axis=0)
+print(pd.concat([df_1, df_2], axis=0))
+print(pd.concat([df_1, df_2], axis=1))
+# ignore_index=True // permite no tener en cuenta los indices y genera unos nuevos
+print(pd.concat([df_1, df_2], axis=0, ignore_index=True))
+
+# Join - Index match
+
+# Se especifica cual va a ser el key
+
+izq = pd.DataFrame({
+    'A': ['A0', 'A1', 'A2'],
+    'B': ['B0', 'B1', 'B2']},
+    index=['k0', 'k1', 'k2'])
+
+der = pd.DataFrame({
+    'C': ['C0', 'C1', 'C2'],
+    'D': ['D0', 'D1', 'D2']},
+    index=['k0', 'k2', 'k3'])
+
+print(izq.index)
+print(der)
+# how= inner | left | right | outer // todos los datos
+print(izq.join(der, how='inner'))
+
+# ===============================================
+# Pivot Table  // Similar a tabla dinamica
+diccionario_df_calificaciones = {
+    'usuarios': ['Gustavi', 'Meliza', 'Martha'],
+    'generos': ['hombre', 'mujer', 'mujer'],
+    'calificaciones': [10, 8, 9],
+    'edades': [24, 22, 54],
+}
+
+df_pv = pd.DataFrame(diccionario_df_calificaciones)
+print(df_pv.pivot_table(index='usuarios', columns='generos', values='calificaciones', aggfunc='sum'))
+
+
+# ===============================================
+# Melt -> dinamizar de columnas a filas, con dos nuevas columnas para especificar la antigua columna y el valor que traía.
+print(df_pv[['usuarios', 'edades']])
+print('========== Dinamizacion con Melt =============')
+print(df_pv[['usuarios', 'edades']].melt())
+print('========== Dinamizacion con Melt =============')
+# Simplemente, podemos seleccionar las columnas que no quiero hacer melt usando el parámetro id_vars.
+print(df_pv.melt(id_vars='usuarios', value_vars='edades'))
+
+
+# =========================================
+# Apply  // permite ejecutar operaciones sobre el DF
+# axies = 0 fillas | 1 columnas
+
+print('========== Apply =================')
+diccionario_df_calificaciones = {
+    'usuarios': ['Gustavi', 'Meliza', 'Martha'],
+    'generos': ['hombre', 'mujer', 'mujer'],
+    'calificaciones': [10, 8, 9],
+    'edades': [24, 22, 54],
+}
+df_apply = pd.DataFrame(diccionario_df_calificaciones)
+
+def pow_value(value: int, pow: int = 2) -> int:
+    return value ** pow
+
+print('Pow function apply')
+df_apply['edades_pow'] = df_apply['edades'].apply(pow_value)
+df_apply['edades_pow_lambda'] = df_apply['edades'].apply(lambda x: x ** 2)
+df_apply['edades_pow_3_condition'] = df_apply.apply(lambda columns: columns['edades'] ** 3 if columns['generos'] == 'mujer' else columns['edades'], axis=1)
+
+print(df_apply)
