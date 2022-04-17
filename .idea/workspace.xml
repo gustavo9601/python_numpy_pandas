@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/python_numpy_pandas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_numpy_pandas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/_pandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Pandas.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,7 @@
       <workItem from="1650060697776" duration="1762000" />
       <workItem from="1650067082004" duration="7229000" />
       <workItem from="1650125992051" duration="626000" />
-      <workItem from="1650228642394" duration="4520000" />
+      <workItem from="1650228642394" duration="5466000" />
     </task>
     <servers />
   </component>
