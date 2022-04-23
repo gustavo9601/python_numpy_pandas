@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d073bc-79cd-4b27-8867-e4a899de0e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_etl.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_concat_merge.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_concat_merge.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laboratorio_pandas_np/lab_coronavirus.py.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_pandas_np/lab_coronavirus.py.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +237,8 @@
       <workItem from="1650060697776" duration="1762000" />
       <workItem from="1650067082004" duration="7229000" />
       <workItem from="1650125992051" duration="626000" />
-      <workItem from="1650228642394" duration="6735000" />
+      <workItem from="1650228642394" duration="7330000" />
+      <workItem from="1650514110143" duration="56000" />
     </task>
     <servers />
   </component>
